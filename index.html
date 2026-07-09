@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Co dziś zrobić?</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    background:#f4f4f4;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    max-width:500px;
+    text-align:center;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#4f46e5;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+<h1>🎲 Co dziś zrobić?</h1>
+
+<h2 id="result"></h2>
+
+<button onclick="losuj()">Losuj ponownie</button>
+</div>
+
+<script>
+
+const rzeczy=[
+"BJ",
+"FJ",
+"HD",
+"Drapanie",
+"Nic",
+"Znowu nic",
+"Z psem wieczorem",
+"Up to you"
+];
+
+function losuj(){
+const wynik=rzeczy[Math.floor(Math.random()*rzeczy.length)];
+document.getElementById("result").innerHTML=wynik;
+}
+
+losuj();
+
+</script>
+
+</body>
+</html>
+
+Pierwsza wersja strony
